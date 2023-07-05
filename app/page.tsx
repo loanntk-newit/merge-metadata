@@ -15,11 +15,8 @@ export default function Home() {
     } else {
       const formData = new FormData();
       formData.append("files", e.target.files as unknown as Blob);
-      fetch("/api/upload-folder", {
+      fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/upload-folder`, {
         method: "POST",
-        headers: {
-          "content-type": "multipart/form-data",
-        },
         body: formData,
       });
       // const zip = new JSZip();
