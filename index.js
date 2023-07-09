@@ -1,14 +1,7 @@
-const {
-  copySync,
-  emptyDirSync,
-  unlinkSync,
-  writeFileSync,
-} = require("fs-extra");
-const { readFiles } = require("./script");
+const { copySync, emptyDirSync } = require("fs-extra");
 
 require("dotenv").config();
 
-const CID = process.env.CID;
 const DIR_REPLACE = process.env.DIR_REPLACE;
 
 emptyDirSync("./output");
@@ -27,23 +20,6 @@ try {
   // Replace json
   copySync(`${DIR_REPLACE}/json`, "output/json", { overwrite: true | false });
   console.log("Replace json success!");
-
-  // Unlink _metadata
-  unlinkSync("output/json/_metadata.json");
-
-  // Replace CID
-  readFiles(
-    "output/json/",
-    (filename, content) => {
-      writeFileSync(
-        `output/json/${filename}`,
-        content.replaceAll("REPLACE", `ipfs://${CID}`)
-      );
-    },
-    (err) => {
-      throw err;
-    }
-  );
 } catch (err) {
   console.error(err);
 }

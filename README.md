@@ -16,15 +16,26 @@ Generate metadata unique
 node generateUnique.js
 ```
 
-Merge json metadata
+******
+
+Merge 2 metadata
+
 ```sh
+node random.js
+node rename.js
 node index.js
 ```
 
-Create metadata 
+---> Update folder output/images to pinata
+---> copy CID to .env
+
 ```sh
+node replace.js
 node metadata.js
 ```
+
+---> Update folder output/json to pinata
+
 
 ## Author
 

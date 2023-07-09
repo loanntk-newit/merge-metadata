@@ -1,6 +1,8 @@
-/node_modules
-/unique/
-/output/
+*
+!/temp/
 /temp/*
-.DS_Store
-package-lock.json
+!.env.example
+!.gitignore
+!*.js
+!package.json
+!README.md

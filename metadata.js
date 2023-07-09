@@ -1,22 +1,26 @@
-const { writeFileSync } = require("fs-extra");
-const { readFiles } = require("./script");
+const {
+  writeFileSync,
+  readdirSync,
+  readFileSync,
+  unlinkSync,
+} = require("fs-extra");
+const path = require("path");
 
-try {
+(async () => {
+  // Unlink _metadata
+  try {
+    unlinkSync("output/json/_metadata.json");
+  } catch (error) {}
   // Create _metadata
   let content_metadata = [];
-  readFiles(
-    "output/json/",
-    (filename, content) => {
-      content_metadata.push(JSON.parse(content));
-      writeFileSync(
-        `output/json/_metadata.json`,
-        JSON.stringify(content_metadata, null, 2)
-      );
-    },
-    (err) => {
-      throw err;
-    }
+  const dir = "output/json/";
+  readdirSync(dir).forEach((file) => {
+    let fullPath = path.join(dir, file);
+    content_metadata.push(JSON.parse(readFileSync(fullPath)));
+  });
+  writeFileSync(
+    `output/json/_metadata.json`,
+    JSON.stringify(content_metadata, null, 2)
   );
-} catch (err) {
-  console.error(err);
-}
+  console.log("Create metadata success!");
+})();

@@ -1,6 +1,6 @@
 const { readFile, readdir } = require("fs-extra");
 
-exports.readFiles = (dirname, onFileContent, onError) => {
+exports.readFiles = async (dirname, onFileContent, onError) => {
   readdir(dirname, (err, filenames) => {
     if (err) {
       onError(err);
