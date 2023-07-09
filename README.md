@@ -14,11 +14,13 @@ npm install
 
 **Step 1:** Copy folder _build_ to folder _temp_
 
-![Screenshot 2023-07-09 at 18 47 30](https://github.com/loanntk-newit/merge-metadata/assets/34096083/f9ef55d5-772d-4858-822d-dc6d3cf50de8)
+![Screenshot 2023-07-09 at 18 47 30](https://github.com/loanntk-newit/merge-metadata/assets/34096083/5559e3b9-6914-4444-8655-6cd3756b538d)
+
 
 **Step 2:** Copy the folder need merge into the project (eg: set name is _gold_)
 
-![Screenshot 2023-07-09 at 18 52 56](https://github.com/loanntk-newit/merge-metadata/assets/34096083/b87eec2f-67d1-4c76-875e-b6b25ccadc09)
+![Screenshot 2023-07-09 at 18 52 56](https://github.com/loanntk-newit/merge-metadata/assets/34096083/faa0cdcb-8dfd-4033-9d58-a5ee37e0573c)
+
 
 **Step 3:** 
 - Open VSCode
@@ -26,7 +28,7 @@ npm install
 
 Eg: 
 
-![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/f3484940-497d-4eff-94cd-55aaa880d3fd)
+![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/72817e0d-b1c0-429d-bd3b-31711689f435)
 
 **Step 4:** Run the following commands one by one
 ```sh
@@ -35,14 +37,14 @@ node rename.js
 node index.js
 ```
 
-![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/534e4d2c-8072-4ef5-a69e-b431d1ac8f37)
+![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/dcb0c8c5-3a6b-414b-8266-316b30a2ca59)
 
 
 **Step 5:** Update folder output/images to pinata
 
 **Step 6:** Copy CID to .env
 
-![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/3caed689-6cd1-404c-bf22-f01f6e9d7228)
+![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/1944869d-88ad-43de-9c50-aefa3b44ca28)
 
 **Step 7:** Continue running commands
 ```sh
@@ -50,7 +52,7 @@ node replace.js
 node metadata.js
 ```
 
-![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/7efb43ab-7f03-4044-b159-827270ad62c1)
+![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/9dad25f7-9614-459d-88f6-d97fee027096)
 
 **Step 8:** Update folder output/json to pinata
 
