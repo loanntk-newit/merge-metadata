@@ -14,7 +14,7 @@ const path = require("path");
   // Create _metadata
   let content_metadata = [];
   const dir = "output/json/";
-  readdirSync(dir).forEach((file) => {
+  readdirSync(dir).forEach((file, i) => {
     let fullPath = path.join(dir, file);
     content_metadata.push(JSON.parse(readFileSync(fullPath)));
   });
