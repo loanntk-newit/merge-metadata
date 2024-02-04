@@ -19,7 +19,7 @@ const path = require("path");
     content_metadata.push(JSON.parse(readFileSync(fullPath)));
   });
   writeFileSync(
-    `output/json/_metadata.json`,
+    `output/json/_metadataWithoutSort.json`,
     JSON.stringify(content_metadata, null, 2)
   );
   console.log("Create metadata success!");

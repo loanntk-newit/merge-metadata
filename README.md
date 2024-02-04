@@ -50,6 +50,7 @@ node index.js
 ```sh
 node replace.js
 node metadata.js
+node sortMetadata.js
 ```
 
 ![image](https://github.com/loanntk-newit/merge-metadata/assets/34096083/9dad25f7-9614-459d-88f6-d97fee027096)
